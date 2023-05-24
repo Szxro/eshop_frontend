@@ -1,0 +1,18 @@
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <label for="email">Email:</label>
+  <input type="text" formControlName="email" id="email" />
+  <span *ngIf="isInputValid('email')">
+    {{ getInputError("email") }}
+  </span>
+  <br />
+  <br />
+  <label for="password">Password:</label>
+  <input type="text" formControlName="password" id="password" />
+  <span *ngIf="isInputValid('password')">
+    {{ getInputError("password") }}
+  </span>
+  <br />
+  <br />
+  <button type="submit">Send</button>
+</form>
+<pre>{{ loginForm.value | json }}</pre>
