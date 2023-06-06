@@ -21,7 +21,7 @@ export class FormHelperService {
   }
 
   public getFieldError(field: string, form: FormGroup): string {
-    if (!form.get(field) && !form.controls[field].errors) return '';
+    if (!(form.get(field) || form.controls[field].errors)) return '';
     //Initializing the error dictionary
     const errorDict = this.getErrorDict(field);
 

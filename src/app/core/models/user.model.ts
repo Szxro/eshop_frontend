@@ -5,3 +5,13 @@ export interface IUser {
   refreshtoken: string;
   password: string;
 }
+
+export interface IUserShippingInfo {
+  address: string;
+  country: string;
+  phone: string;
+  state: string;
+  city: string;
+  postalCode: string;
+  countryCode: string;
+}
